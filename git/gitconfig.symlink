@@ -35,3 +35,5 @@
 	signingkey = 7FE8BC341C7DBC97
 [credential]
 	helper = cache --timeout=3600
+[commit]
+	gpgsign = true
