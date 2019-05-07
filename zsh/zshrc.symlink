@@ -12,6 +12,9 @@ then
   source ~/.localrc
 fi
 
+# antibody plugins
+source ~/.dotfiles/zsh/zsh_plugins.sh
+
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -29,8 +32,14 @@ do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# Use modern completion system
+autoload -Uz compinit
+
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit -d
+done
+
+compinit -C -d
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
