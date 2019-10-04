@@ -12,9 +12,6 @@ then
   source ~/.localrc
 fi
 
-# antibody plugins
-source ~/.dotfiles/zsh/zsh_plugins.sh
-
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -25,21 +22,50 @@ do
   source $file
 done
 
-# load everything but the path and completion files
+# load everything but the path, plugin, and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
 
+### Added by Zplugin's installer
+source $HOME/.zplugin/bin/zplugin.zsh
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin's installer chunk
+
+### ZSH Plugins ###
+
+### UI
+
+zplugin light chrissicool/zsh-256color
+zplugin light romkatv/powerlevel10k
+
+zplugin ice wait
+zplugin light zsh-users/zsh-history-substring-search
+
+### Plugins
+
+zplugin light mafredri/zsh-async
+zplugin light AdrieanKhisbe/diractions
+
+zplugin ice wait
+zplugin light hlissner/zsh-autopair
+
+zplugin ice wait'1' atload'_zsh_autosuggest_start'
+zplugin light zsh-users/zsh-autosuggestions
+
+zplugin ice wait'1'
+zplugin light zuxfoucault/colored-man-pages_mod
+
+zplugin ice depth'1' lucid wait'0' atinit"_zpcompinit_custom; zpcdreplay"
+zplugin light zdharma/fast-syntax-highlighting
+
+source ~/p10k-lean.zsh
+
 # initialize autocomplete here, otherwise functions won't be loaded
 # Use modern completion system
-autoload -Uz compinit
-
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit -d
-done
-
-compinit -C -d
+local zcd=${ZPLGM[ZCOMPDUMP_PATH]:-${ZDOTDIR:-$HOME}/.zcompdump}
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -57,3 +83,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/zahidislm/.sdkman"
+[[ -s "/home/zahidislm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/zahidislm/.sdkman/bin/sdkman-init.sh"

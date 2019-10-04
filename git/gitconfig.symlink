@@ -32,7 +32,7 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [user]
-	signingkey = 7FE8BC341C7DBC97
+	signingkey = 4D01A1E3BEDE54955832F3A47FE8BC341C7DBC97
 [credential]
 	helper = cache --timeout=3600
 [commit]

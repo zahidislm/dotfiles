@@ -1,8 +1,13 @@
 alias reload!=". $HOME/.zshrc"
-alias cls="clear" # Good "ol Clear Screen command
-alias install="sudo dnf install"
-alias upgrade="sudo dnf upgrade"
-alias uninstall="sudo dnf remove"
-alias vpn-on="sudo wg-quick up $MULLVAD_SERVER"
-alias vpn-off="sudo wg-quick down $MULLVAD_SERVER"
-alias dolphin-root="pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin"
+alias cls="clear"
+alias zplugin-update="zplugin update && zplugin self-update"
+
+alias update="sudo apt-fast update"
+alias install="sudo apt-fast install"
+alias upgrade="sudo apt-fast upgrade"
+alias dist-upgrade="sudo apt-fast dist-upgrade"
+alias uninstall="sudo apt-fast remove"
+alias autorm="sudo apt-fast autoremove"
+
+alias code="code-insiders"
+alias win~="cd /mnt/c/Users/zahid"

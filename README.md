@@ -2,7 +2,7 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-Used with Linux: Fedora 30
+Used with WSL2: Ubuntu
 
 I was a little tired of having long alias files and everything strewn about
 (which is extremely common on other dotfiles projects, too). That led to this
