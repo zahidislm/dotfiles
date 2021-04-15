@@ -4,8 +4,7 @@ ZSH_HOME=$HOME/dotfiles/zsh
 module_order=(environment plugins tools history directory ssh gpg alias)
 
 for module in $module_order;
-  for config ($ZSH_HOME/modules/$module/**.zsh);
-    source $config
+  source $ZSH_HOME/modules/$module/init.zsh
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
