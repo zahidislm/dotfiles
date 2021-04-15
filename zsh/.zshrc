@@ -1,7 +1,7 @@
 ZSH_HOME=$HOME/dotfiles/zsh
 
 # load the zsh modules
-module_order=(environment plugins history directory ssh gpg alias)
+module_order=(environment plugins tools history directory ssh gpg alias)
 
 for module in $module_order;
   for config ($ZSH_HOME/modules/$module/**.zsh);
