@@ -3,7 +3,7 @@
 	email = dev@zahidislm.com
 	signingkey = 4026B21D75B5C80D710585BBF4714D0BFE3D3E9D
 [color]
-  	ui = auto
+	ui = auto
   	interactive = auto
 [color "branch"]
 	current = yellow reverse
