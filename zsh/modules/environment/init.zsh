@@ -70,3 +70,8 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 #
 mkdir -p $HOME/.local/bin
 export PATH=/usr/local/bin:$HOME/bin:$HOME/.local/bin:$PATH
+
+#
+# GPG
+#
+export GPG_TTY=$(tty)
