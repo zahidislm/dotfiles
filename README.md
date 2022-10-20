@@ -38,4 +38,4 @@ enter the dotfiles directory
 
 install the config folders
 
-`stow git zsh`
+`stow git zsh nvim`
