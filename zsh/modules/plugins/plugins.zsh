@@ -25,7 +25,7 @@ zturbo \
 ## EXA
 zturbo \
     from'gh-r' \
-    as'program' \
+    as'command' \
     sbin'**/exa -> exa' \
     atclone'cp -vf completions/exa.zsh _exa' \
         ogham/exa
@@ -33,6 +33,14 @@ zturbo \
 zturbo \
   has'exa' \
     zplugin/zsh-exa
+
+## BAT
+zturbo \
+    as'command' \
+    from'gh-r' \
+    sbin'**/bat -> bat' \
+    atclone'cp -vf **/autocomplete/bat.zsh _bat' \
+        @sharkdp/bat
 
 ## GIT_DELTA
 zturbo \

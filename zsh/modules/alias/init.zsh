@@ -14,3 +14,9 @@ fi
 if (( $+commands[nvim] )); then
     alias vi='nvim'
 fi
+
+## BAT
+if (( $+commands[bat] )); then
+    alias ccat='cat'
+    alias cat='bat'
+fi
