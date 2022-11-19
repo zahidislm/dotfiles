@@ -34,9 +34,12 @@ zturbo \
   has'exa' \
     zplugin/zsh-exa
 
-## DSF
-zinit ice wait lucid as"program" pick"bin/git-dsf"
-zturbo z-shell/zsh-diff-so-fancy
+## GIT_DELTA
+zturbo \
+    as'program' \
+    from'gh-r' \
+    sbin'**/delta -> delta' \
+        dandavison/delta
 
 ## FZF
 zturbo \

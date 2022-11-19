@@ -25,6 +25,8 @@
 	# Use custom `.gitignore` and `.gitattributes`.
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+    pager = delta
+    editor = nvim
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -33,7 +35,19 @@
 
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
-	untrackedCache = true
+    untrackedCache = true
+[interactive]
+    diffFilter = delta --color-only --diff-so-fancy --features=interactive
+[delta]
+    line-numbers = true
+	features = decorations
+	side-by-side = true
+    navigate = true
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    syntax-theme = Nord
 [help]
     autocorrect = 1
 [commit]
@@ -41,7 +55,8 @@
 	gpgsign = true
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
-	log = true
+    log = true
+    conflictstyle = diff3
 [push]
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
 	default = simple
@@ -50,7 +65,8 @@
 	followTags = true
 [diff]
 	# Detect copies as well as renames.
-	renames = copies
+    renames = copies
+    colorMoved = default
 [init]
 	defaultBranch = main
 [gpg]
