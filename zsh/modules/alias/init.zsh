@@ -9,3 +9,8 @@ if (( $+commands[swupd] )); then
   alias pkgf='sudo swupd search'            # Searches for a package/bundle.
   alias pkgu='sudo swupd update'       # Updates bundles.
 fi
+
+## NEOVIM
+if (( $+commands[nvim] )); then
+    alias vi='nvim'
+fi
