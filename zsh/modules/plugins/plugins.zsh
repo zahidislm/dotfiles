@@ -9,10 +9,12 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-## Utilities
+## VENV
+# AUTOENV
 zturbo MichaelAquilina/zsh-autoswitch-virtualenv
 
-## ZOXIDE
+## SYSTEM UTILITIES
+# ZOXIDE
 zturbo \
     as'command' \
     from'gh-r' \
@@ -22,7 +24,7 @@ zturbo \
     atpull'%atclone' src'init.zsh' nocompile'!' \
         ajeetdsouza/zoxide
 
-## EXA
+# EXA
 zturbo \
     from'gh-r' \
     as'command' \
@@ -34,7 +36,7 @@ zturbo \
   has'exa' \
     zplugin/zsh-exa
 
-## BAT
+# BAT
 zturbo \
     as'command' \
     from'gh-r' \
@@ -42,21 +44,14 @@ zturbo \
     atclone'cp -vf **/autocomplete/bat.zsh _bat' \
         @sharkdp/bat
 
-## FD
+# FD-FIND
 zturbo \
     as'command' \
     from'gh-r' \
     sbin'**/fd -> fd' \
         @sharkdp/fd
 
-## GIT_DELTA
-zturbo \
-    as'program' \
-    from'gh-r' \
-    sbin'**/delta -> delta' \
-        dandavison/delta
-
-## FZF
+# FZF
 zturbo \
     from'gh-r' \
     sbin \
@@ -64,6 +59,15 @@ zturbo \
 
 zinit pack"bgn-binary" for fzf
 zturbo Aloxaf/fzf-tab
+
+
+## GIT
+# DELTA
+zturbo \
+    as'program' \
+    from'gh-r' \
+    sbin'**/delta -> delta' \
+        dandavison/delta
 
 ## Syntax Chain
 zturbo \
