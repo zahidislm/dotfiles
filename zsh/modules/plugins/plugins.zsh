@@ -42,6 +42,13 @@ zturbo \
     atclone'cp -vf **/autocomplete/bat.zsh _bat' \
         @sharkdp/bat
 
+## FD
+zturbo \
+    as'command' \
+    from'gh-r' \
+    sbin'**/fd -> fd' \
+        @sharkdp/fd
+
 ## GIT_DELTA
 zturbo \
     as'program' \
