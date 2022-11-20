@@ -69,6 +69,9 @@ zturbo \
     sbin'**/delta -> delta' \
         dandavison/delta
 
+# FORGIT
+zturbo wfxr/forgit
+
 ## Syntax Chain
 zturbo \
     zdharma-continuum/fast-syntax-highlighting \
