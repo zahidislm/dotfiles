@@ -20,3 +20,8 @@ if (( $+commands[bat] )); then
     alias ccat='cat'
     alias cat='bat'
 fi
+
+## FZF
+if (( $+commands[bat] && $+commands[fzf] )); then
+    alias fzfp='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+fi
