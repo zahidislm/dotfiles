@@ -36,6 +36,13 @@ zturbo \
   has'exa' \
     zplugin/zsh-exa
 
+# RIPGREP
+zturbo \
+    from'gh-r' \
+    as'command' \
+    sbin'**/rg -> rg' \
+        BurntSushi/ripgrep
+
 # BAT
 zturbo \
     as'command' \
