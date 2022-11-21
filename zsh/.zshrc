@@ -1,7 +1,7 @@
 ZSH_HOME=$HOME/dotfiles/zsh
 
 # load the zsh modules
-module_order=(environment plugins history directory ssh alias)
+module_order=(environment zinit cli-tools plugins history directory ssh alias)
 
 for module in $module_order;
   source $ZSH_HOME/modules/$module/init.zsh
