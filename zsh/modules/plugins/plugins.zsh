@@ -60,6 +60,12 @@ zturbo \
 zinit pack"bgn-binary" for fzf
 zturbo Aloxaf/fzf-tab
 
+# TOPGRADE
+zturbo \
+    as'program' \
+    from'gh-r' \
+    sbin \
+        topgrade-rs/topgrade
 
 ## GIT
 # DELTA
