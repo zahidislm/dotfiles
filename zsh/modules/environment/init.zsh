@@ -16,17 +16,17 @@
 # which is generally better than url-quote-magic so we load that when possible.
 autoload -Uz is-at-least
 if [[ ${ZSH_VERSION} != 5.1.1 && ${TERM} != "dumb" ]]; then
-  if is-at-least 5.2; then
-    autoload -Uz bracketed-paste-url-magic
-    zle -N bracketed-paste bracketed-paste-url-magic
-  else
-    if is-at-least 5.1; then
-      autoload -Uz bracketed-paste-magic
-      zle -N bracketed-paste bracketed-paste-magic
+    if is-at-least 5.2; then
+        autoload -Uz bracketed-paste-url-magic
+        zle -N bracketed-paste bracketed-paste-url-magic
+    else
+        if is-at-least 5.1; then
+            autoload -Uz bracketed-paste-magic
+            zle -N bracketed-paste bracketed-paste-magic
+        fi
     fi
-  fi
-  autoload -Uz url-quote-magic
-  zle -N self-insert url-quote-magic
+    autoload -Uz url-quote-magic
+    zle -N self-insert url-quote-magic
 fi
 
 #
@@ -34,7 +34,7 @@ fi
 #
 
 setopt COMBINING_CHARS      # Combine zero-length punctuation characters (accents)
-                            # with the base character.
+# with the base character.
 setopt INTERACTIVE_COMMENTS # Enable comments in interactive shell.
 setopt RC_QUOTES            # Allow 'Henry''s Garage' instead of 'Henry'\''s Garage'.
 unsetopt MAIL_WARNING       # Don't print a warning message if a mail file has been accessed.
@@ -64,30 +64,6 @@ export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
 export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
-
-#
-# Util Dark/Light Mode Theming
-#
-
-# FZF
-declare -A fzf_theme
-fzf_theme=([Light]=" \
---color=bg+:#f9f1eb,bg:#ffffff,spinner:#dc8a78,hl:#d20f39 \
---color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
---color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#e36209 \
---ansi" [Dark]=" \
---color=bg+:#2e3948,bg:#24292e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#ffab70 \
---ansi")
-
-export FZF_DEFAULT_OPTS=$fzf_theme[$SysTheme]
-
-# Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd --type file --color=always --exclude .git'
-
-# To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 #
 # Paths
