@@ -5,7 +5,7 @@ zturbo MichaelAquilina/zsh-autoswitch-virtualenv
 ##Utils
 # EXA
 zturbo \
-  has'exa' \
+  has'exa' atinit'AUTOCD=1' \
     zplugin/zsh-exa
 
 # FZF-TAB
