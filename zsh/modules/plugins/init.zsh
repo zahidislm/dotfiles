@@ -5,8 +5,8 @@ zturbo MichaelAquilina/zsh-autoswitch-virtualenv
 ##Utils
 # EXA
 zturbo \
-  has'exa' atinit'AUTOCD=1' \
-    zplugin/zsh-exa
+    has'exa' atinit'AUTOCD=1' \
+  zplugin/zsh-exa
 
 # FZF-TAB
 zturbo Aloxaf/fzf-tab
@@ -16,18 +16,18 @@ zturbo wfxr/forgit
 
 ## Syntax Chain
 zturbo \
-    zdharma-continuum/fast-syntax-highlighting \
-    zsh-users/zsh-history-substring-search \
+  zsh-users/zsh-history-substring-search \
     atload"_zsh_autosuggest_start" \
-        zsh-users/zsh-autosuggestions \
-    blockf atpull'zinit creinstall -q .' \
-        zsh-users/zsh-completions
+  zsh-users/zsh-autosuggestions \
+    atinit"ZINIT[COMPINIT_OPTS]= zpcompinit; zpcdreplay" \
+  zdharma/fast-syntax-highlighting
+
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
 
 ## STARSHIP PROMPT
 zturbo \
     as'program' \
     from'gh-r' \
-    sbin \
-        starship/starship
-
-eval "$(starship init zsh)"
+    sbin'**/starship -> starship' \
+  starship/starship

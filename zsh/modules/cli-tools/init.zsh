@@ -4,10 +4,9 @@ zturbo \
     as'command' \
     from'gh-r' \
     sbin \
-    atinit'ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay' \
     atclone'./zoxide init zsh > init.zsh' \
     atpull'%atclone' src'init.zsh' nocompile'!' \
-        ajeetdsouza/zoxide
+  ajeetdsouza/zoxide
 
 # EXA
 zturbo \
@@ -15,14 +14,14 @@ zturbo \
     as'command' \
     sbin'**/exa -> exa' \
     atclone'cp -vf completions/exa.zsh _exa' \
-        ogham/exa
+  ogham/exa
 
 # RIPGREP
 zturbo \
     from'gh-r' \
     as'command' \
     sbin'**/rg -> rg' \
-        BurntSushi/ripgrep
+  BurntSushi/ripgrep
 
 ## BAT
 zturbo \
@@ -30,7 +29,7 @@ zturbo \
     from'gh-r' \
     sbin'**/bat -> bat' \
     atclone'cp -vf **/autocomplete/bat.zsh _bat' \
-        @sharkdp/bat
+  @sharkdp/bat
 
 # Enable synthax auto-theming support
 local bat_config=$HOME/.config/bat/config
@@ -41,13 +40,15 @@ zturbo \
     as'command' \
     from'gh-r' \
     sbin'**/fd -> fd' \
-        @sharkdp/fd
+  @sharkdp/fd
 
 ## FZF
 zturbo \
+    as'command' \
     from'gh-r' \
-    sbin \
-        stedolan/jq
+    sbin'* -> jq' \
+    nocompile \
+ @stedolan/jq
 
 zinit pack"bgn-binary" for fzf
 
@@ -71,7 +72,7 @@ zturbo \
     as'program' \
     from'gh-r' \
     sbin \
-        topgrade-rs/topgrade
+  topgrade-rs/topgrade
 
 ## GIT
 # DELTA
@@ -79,7 +80,7 @@ zturbo \
     as'program' \
     from'gh-r' \
     sbin'**/delta -> delta' \
-        dandavison/delta
+  dandavison/delta
 
 # Enable synthax auto-theming support
 local git_config=$HOME/dotfiles/git/.gitconfig

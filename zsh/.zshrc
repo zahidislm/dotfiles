@@ -7,6 +7,9 @@ module_order=(environment directory functions zinit \
 for module in $module_order;
   source $ZSH_HOME/modules/$module/init.zsh
 
+# activate starship prompt
+eval "$(starship init zsh)"
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
