@@ -25,9 +25,5 @@ zturbo \
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
 
-## STARSHIP PROMPT
-zturbo \
-    as'program' \
-    from'gh-r' \
-    sbin'**/starship -> starship' \
-  starship/starship
+# Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
