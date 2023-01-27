@@ -47,7 +47,7 @@
     keep-plus-minus-markers = false
 [delta "decorations"]
     commit-decoration-style = blue ol
-    syntax-theme = "Nord"
+    syntax-theme = "OneHalfDark"
 [help]
     autocorrect = 1
 [commit]
