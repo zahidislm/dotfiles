@@ -1,7 +1,7 @@
 [user]
 	name = Zahid Islam
 	email = dev@zahidislm.com
-	signingkey = 4026B21D75B5C80D710585BBF4714D0BFE3D3E9D
+	signingkey = 1FAF5EFB91AACAB6
 [color]
 	ui = auto
   	interactive = auto
@@ -41,7 +41,6 @@
 [delta]
     line-numbers = true
 	features = decorations
-	side-by-side = true
     navigate = true
 [delta "interactive"]
     keep-plus-minus-markers = false
@@ -63,6 +62,7 @@
 
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	autoSetupRemote = true
 [diff]
 	# Detect copies as well as renames.
     renames = copies
