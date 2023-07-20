@@ -50,7 +50,7 @@ zturbo \
     from'gh-r' \
     sbin'* -> jq' \
     nocompile \
- @stedolan/jq
+ @jqlang/jq
 
 zinit pack"bgn-binary" for fzf
 
@@ -114,6 +114,13 @@ zturbo \
     from'gh-r' \
     sbin'**/delta -> delta' \
   dandavison/delta
+
+# GH
+zturbo \
+    as'program' \
+    from'gh-r' \
+    sbin'**/bin/gh -> gh' \
+   cli/cli
 
 # Enable synthax auto-theming support
 local git_config=$HOME/dotfiles/git/.gitconfig
