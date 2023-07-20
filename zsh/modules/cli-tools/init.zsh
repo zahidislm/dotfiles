@@ -21,7 +21,8 @@ zturbo \
     from'gh-r' \
     as'command' \
     sbin'**/vivid -> vivid' \
-    atload'export LS_COLORS="$(vivid generate one-${${SysTheme:l}:-dark})"' \
+    atload'export LS_COLORS="$(vivid generate $ZSH_HOME/modules/cli-tools/vivid/themes/fox-${${SysTheme:l}:-dark}.yml)" \
+    && zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}' \
   @sharkdp/vivid
 
 ## BAT
@@ -55,53 +56,45 @@ zinit pack"bgn-binary" for fzf
 
 ## Enable synthax auto-theming support
 
-# OneHalfLight
-local color00='#fafafa'
-local color01='#f0f0f1'
-local color02='#e5e5e6'
-local color03='#a0a1a7'
-local color04='#696c77'
-local color05='#383a42'
-local color06='#202227'
-local color07='#090a0b'
-local color08='#ca1243'
-local color09='#d75f00'
-local color0A='#c18401'
-local color0B='#50a14f'
-local color0C='#0184bc'
-local color0D='#4078f2'
-local color0E='#a626a4'
-local color0F='#986801'
+# dayfox
+local color00='#837a72'
+local color01='#f6f2ee'
+local color02='#4863b6'
+local color03='#3d2b5a'
+local color04='#e7d2be'
+local color05='#2848a9'
+local color06='#396847'
+local color07='#6e33ce'
+local color08='#3d2b5a'
+local color09='#a5222f'
+local color10='#b3434e'
+local color11='#8452d5'
 
 local lightFZF="\
-    --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D \
-    --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C \
-    --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D \
-    --ansi"
+    --color=fg:$color00,bg:$color01,hl:$color02 \
+    --color=fg+:$color03,bg+:$color04,hl+:$color05 \
+    --color=info:$color06,prompt:$color07,pointer:$color08 \
+    --color=marker:$color09,spinner:$color10,header:$color11"
 
-# OneHalfDark
-local color00='#282c34'
-local color01='#353b45'
-local color02='#3e4451'
-local color03='#545862'
-local color04='#565c64'
-local color05='#abb2bf'
-local color06='#b6bdca'
-local color07='#c8ccd4'
-local color08='#e06c75'
-local color09='#d19a66'
-local color0A='#e5c07b'
-local color0B='#98c379'
-local color0C='#56b6c2'
-local color0D='#61afef'
-local color0E='#c678dd'
-local color0F='#be5046'
+# carbonfox
+local color00='#d1d1d1'
+local color01='#161616'
+local color02='#78a9ff'
+local color03='#f2f4f8'
+local color04='#2a2a2a'
+local color05='#8cb6ff'
+local color06='#25be6a'
+local color07='#be95ff'
+local color08='#be95ff'
+local color09='#ee5396'
+local color10='#f16da6'
+local color11='#c8a5ff'
 
 local darkFZF="\
-    --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D \
-    --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C \
-    --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D \
-    --ansi"
+    --color=fg:$color00,bg:$color01,hl:$color02 \
+    --color=fg+:$color03,bg+:$color04,hl+:$color05 \
+    --color=info:$color06,prompt:$color07,pointer:$color08 \
+    --color=marker:$color09,spinner:$color10,header:$color11"
 
 auto_theme_fzf $lightFZF $darkFZF
 
