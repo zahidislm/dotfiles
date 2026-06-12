@@ -1,0 +1,65 @@
+# System
+brew "git"
+brew "gnupg" if OS.mac?
+brew "pinentry-mac" if OS.mac?
+cask "macos-fuse-t/cask/fuse-t", trusted: true
+cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
+
+# Tools
+brew "bat"
+brew "cmake"
+brew "exiftool"
+brew "eza"
+brew "fd"
+brew "fzf"
+brew "gallery-dl"
+brew "git-delta"
+brew "lazygit"
+brew "mediainfo"
+brew "mise"
+brew "neovim"
+brew "can1357/tap/omp", trusted: true
+brew "parallel"
+brew "ripgrep"
+brew "stow"
+brew "tag"
+brew "tree"
+brew "yazi" 
+brew "yt-dlp"
+
+
+# Libraries
+brew "libtermkey"
+cask "android-platform-tools"
+
+# Languages
+brew "juliaup"
+brew "uv"
+brew "zig"
+
+# LSP/Formatters/Linters
+brew "emmylua_ls"
+brew "marksman"
+# brew "shuck-cli"
+brew "taplo"
+brew "tree-sitter-cli"
+brew "zls"
+
+# Taps
+tap "domt4/autoupdate", trusted: true
+tap "santosh7017/androidfilesync", trusted: true
+tap "FuJacob/cotabby", trusted: true
+
+# GUI
+cask "androidfilesync"
+cask "cotabby"
+cask "ghostty"
+cask "helium-browser"
+cask "iloader"
+cask "localsend"
+cask "octarine"
+cask "orbstack"
+cask "orion"
+brew "mpv"
+cask "zed"
+

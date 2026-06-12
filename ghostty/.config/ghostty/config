@@ -1,0 +1,11 @@
+# Appearence options
+theme = dark:kanso-ink,light:kanso-pearl
+adjust-cell-height = "13%"
+background-opacity = 0.90
+background-blur-radius = 23
+window-height = 32
+window-width = 132
+
+# Platform-based options
+macos-secure-input-indication = true
+macos-option-as-alt = true

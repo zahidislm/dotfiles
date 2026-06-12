@@ -1,73 +1,177 @@
 [user]
-	name = Zahid Islam
-	email = dev@zahidislm.com
-	signingkey = 1FAF5EFB91AACAB6
+    name = Zahid Islam
+    email = dev@zahidislm.com
+	signingkey = DF1267A183EB31D9F8EACB8F14B08D38FAD00E94
 [color]
-	ui = auto
-  	interactive = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    ui = auto
+    interactive = auto
 [apply]
-	# Detect whitespace errors when applying a patch.
-	whitespace = fix
+    # Detect whitespace errors when applying a patch.
+    whitespace = fix
 [core]
-	# Use custom `.gitignore` and `.gitattributes`.
+    # Use custom `.gitignore` and `.gitattributes`.
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+    attributesfile = ~/.gitattributes
     pager = delta
     editor = nvim
 
-	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
-	# [default] trailing-space: looks for spaces at the end of a line
-	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
-	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error.
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	# Speed up commands involving untracked files such as `git status`.
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
+    # Speed up commands involving untracked files such as `git status`.
+    # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
+    compression = 9
 [interactive]
     diffFilter = delta --color-only --diff-so-fancy --features=interactive
 [delta]
     line-numbers = true
-	features = decorations
+	features = kanso-pearl
     navigate = true
-[delta "interactive"]
-    keep-plus-minus-markers = false
-[delta "decorations"]
-    commit-decoration-style = blue ol
-    syntax-theme = "OneHalfDark"
+	light = true
+[delta "kanso-ink"]
+    dark = true
+    syntax-theme = ansi
+    # File Labels
+    file-added-label = [+]
+    file-copied-label = [==]
+    file-modified-label = [*]
+    file-removed-label = [-]
+    file-renamed-label = [->]
+    # File Header Styles
+    file-style = "#c5c9c7" bold
+    file-decoration-style = "#DCA561" ul
+    # Hunk Header Styles
+    hunk-header-style = file line-number syntax "#252535" bold italic
+    hunk-header-file-style = "#DCA561" "#252535" ul bold
+    hunk-header-line-number-style = "#DCA561" "#252535" box bold
+    hunk-header-decoration-style = "#DCA561" "#252535" ul
+    # Diff Styles
+    minus-style = syntax "#43242B"
+    plus-style = syntax "#2B3328"
+    minus-emph-style = "#14171d" "#C34043"
+    plus-emph-style = "#14171d" "#76946A"
+    # Line Numbers
+    line-numbers = true
+    line-numbers-minus-style = "#C34043" "#43242B"
+    line-numbers-plus-style = "#76946A" "#2B3328"
+    line-numbers-left-style = "#a4a7a4"
+    line-numbers-right-style = "#a4a7a4"
+    line-numbers-zero-style = "#393B42"
+    # General Styles
+    zero-style = syntax
+    whitespace-error-style = "#14171d" "#C34043" bold
+    # Blame Styles
+    blame-code-style = syntax
+    blame-format = "{author:<18} {commit:<6} {timestamp:<15}"
+    blame-palette = "#14171d" "#252535" "#393B42"
+    # Merge Conflicts
+    merge-conflict-begin-symbol = ~
+    merge-conflict-end-symbol = ~
+    merge-conflict-ours-diff-header-style = "#DCA561" "#252535" bold
+    merge-conflict-ours-diff-header-decoration-style = "#DCA561" "#252535" box
+    merge-conflict-theirs-diff-header-style = "#DCA561" "#252535" bold
+    merge-conflict-theirs-diff-header-decoration-style = "#DCA561" "#252535" box
+[delta "kanso-pearl"]
+    syntax-theme = ansi
+    # File Labels
+    file-added-label = [+]
+    file-copied-label = [==]
+    file-modified-label = [*]
+    file-removed-label = [-]
+    file-renamed-label = [->]
+    # File Header Styles
+    file-style = "#22262D" bold
+    file-decoration-style = "#de9800" ul
+    # Hunk Header Styles
+    hunk-header-style = file line-number syntax bold italic
+    hunk-header-file-style = "#de9800" ul bold
+    hunk-header-line-number-style = "#de9800" box bold
+    hunk-header-decoration-style = "#de9800" ul
+    # Diff Styles
+    minus-style = syntax "#d9a594"
+    plus-style = syntax "#b7d0ae"
+    minus-emph-style = "#f2f1ef" "#d7474b"
+    plus-emph-style = "#f2f1ef" "#6e915f"
+    # Line Numbers
+    line-numbers = true
+    line-numbers-minus-style = "#d7474b" "#d9a594"
+    line-numbers-plus-style = "#6e915f" "#b7d0ae"
+    line-numbers-left-style = "#9F9F99"
+    line-numbers-right-style = "#9F9F99"
+    line-numbers-zero-style = "#9F9F99"
+    # General Styles
+    zero-style = syntax
+    whitespace-error-style = "#f2f1ef" "#d7474b" bold
+    # Blame Styles
+    blame-code-style = syntax
+    blame-format = "{author:<18} {commit:<6} {timestamp:<15}"
+    blame-palette = "#f2f1ef" "#e2e1df" "#d7e3d8"
+    # Merge Conflicts
+    merge-conflict-begin-symbol = ~
+    merge-conflict-end-symbol = ~
+    merge-conflict-ours-diff-header-style = "#de9800" bold
+    merge-conflict-ours-diff-header-decoration-style = "#de9800" box
+    merge-conflict-theirs-diff-header-style = "#de9800" bold
+    merge-conflict-theirs-diff-header-decoration-style = "#de9800" box
 [help]
     autocorrect = 1
 [commit]
-	# https://help.github.com/articles/signing-commits-using-gpg/
+    # https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
 [merge]
-	# Include summaries of merged commits in newly created merge commit messages
+    # Include summaries of merged commits in newly created merge commit messages
     log = true
     conflictstyle = diff3
 [push]
-	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+    # https://git-scm.com/docs/git-config#git-config-pushdefault
+    default = simple
 
-	# Make `git push` push relevant annotated tags when pushing branches out.
-	followTags = true
-	autoSetupRemote = true
+    # Make `git push` push relevant annotated tags when pushing branches out.
+    followTags = true
+    autoSetupRemote = true
 [diff]
-	# Detect copies as well as renames.
+    # Detect copies as well as renames.
     renames = copies
     colorMoved = default
+    algorithm = histogram
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [gpg]
-	program = gpg
+    program = gpg
+[branch]
+    sort = -committerdate
+[column]
+    ui = auto
+[tag]
+    sort = -version:refname
+	gpgSign = true
+[maintenance]
+    auto = true
+    strategy = incremental
+[rerere]
+    enabled = true
+    autoUpdate = true
+[alias]
+    alias = !echo 'git config --get-regexp ^alias\\.' && git config --get-regexp ^alias\\.
+    ac = !echo 'git add -A , git commit -m' && git add -A && git commit -m
+    b = !echo 'git branch' && git branch
+    browse = !echo 'open `git config get remote.origin.url`' && open `git config get remote.origin.url`
+    co = !echo 'git checkout' && git checkout
+    commit-empty = !echo 'git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"' && git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"
+    delete-local-branches-already-merged-in-remote = !echo 'git branch --merged | egrep -i -v(main|master|develop|dev|staging|release)| xargs -r git branch -d' && git branch --merged | egrep -i -v '(main|master|develop|dev|staging|release)' | xargs -r git branch -d
+    delete-local-branches-already-merged-in-remote-what-if = !echo 'git branch --merged | egrep -i -v(main|master|develop|dev|staging|release)//| xargs -r git branch -d' && git branch --merged | egrep -i -v '(main|master|develop|dev|staging|release)'
+    delete-local-tags = !echo 'git tag -l | xargs git tag -d && git fetch --tags' && git tag -l | xargs git tag -d && git fetch --tags
+    delete-stale-remote-tracking-branches-from-local = !echo 'git remote prune origin' && git remote prune origin
+    ge = !echo 'GitExtensions .' && GitExtensions .
+    gec = !echo 'GitExtensions commit' && GitExtensions commit
+    gtfo = !echo 'git reset --hard , git clean -xfd' && git reset --hard && git clean -xfd
+    history = !echo 'git log --oneline --graph --decorate --all' && git log --oneline --graph --decorate --all
+    s = !echo 'git status' && git status
+    pushf = !echo 'git push --force-with-lease' && git push --force-with-lease
+    pushnew = !echo 'git push --set-upstream origin branch_name' && git push --set-upstream origin `git symbolic-ref --short HEAD`
+    stashall = !echo 'git stash push --include-untracked' && git stash push --include-untracked
+    graph = log --all --graph --decorate --oneline
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
