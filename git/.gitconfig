@@ -1,7 +1,7 @@
 [user]
     name = Zahid Islam
     email = dev@zahidislm.com
-	signingkey = DF1267A183EB31D9F8EACB8F14B08D38FAD00E94
+	signingkey = 446E571764BB352562A4C33160F5B1484DC952F8
 [color]
     ui = auto
     interactive = auto
@@ -28,9 +28,9 @@
     diffFilter = delta --color-only --diff-so-fancy --features=interactive
 [delta]
     line-numbers = true
-	features = kanso-pearl
+	features = kanso-ink
     navigate = true
-	light = true
+	light = false
 [delta "kanso-ink"]
     dark = true
     syntax-theme = ansi
