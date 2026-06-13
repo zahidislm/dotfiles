@@ -29,7 +29,6 @@ brew "yt-dlp"
 
 
 # Libraries
-brew "libtermkey"
 cask "android-platform-tools"
 
 # Languages
@@ -61,5 +60,6 @@ cask "octarine"
 cask "orbstack"
 cask "orion"
 brew "mpv"
+cask "veracrypt-fuse-t"
 cask "zed"
 
