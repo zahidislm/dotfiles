@@ -1,7 +1,7 @@
 [user]
     name = Zahid Islam
-    email = dev@zahidislm.com
-	signingkey = 446E571764BB352562A4C33160F5B1484DC952F8
+	email = dev@zahidislm.com
+	signingkey = DE5E205CBE913676C6EAFA4B75A97F4044BF3A56
 [color]
     ui = auto
     interactive = auto
