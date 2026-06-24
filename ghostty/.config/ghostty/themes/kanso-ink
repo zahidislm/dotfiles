@@ -20,3 +20,5 @@ foreground = #c5c9c7
 cursor-color = #f2f1ef
 selection-background = #393B42
 selection-foreground = #c5c9c7
+
+custom-shader = shaders/bloom032.glsl
