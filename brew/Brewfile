@@ -2,6 +2,7 @@
 brew "git"
 brew "gnupg" if OS.mac?
 brew "pinentry-mac" if OS.mac?
+brew "paperkey"
 cask "macos-fuse-t/cask/fuse-t", trusted: true
 cask "macos-fuse-t/cask/fuse-t-sshfs", trusted: true
 
@@ -27,7 +28,6 @@ brew "tree"
 brew "yazi" 
 brew "yt-dlp"
 
-
 # Libraries
 cask "android-platform-tools"
 
@@ -39,7 +39,7 @@ brew "zig"
 # LSP/Formatters/Linters
 brew "emmylua_ls"
 brew "marksman"
-# brew "shuck-cli"
+brew "shfmt"
 brew "taplo"
 brew "tree-sitter-cli"
 brew "zls"
@@ -47,11 +47,9 @@ brew "zls"
 # Taps
 tap "domt4/autoupdate", trusted: true
 tap "santosh7017/androidfilesync", trusted: true
-tap "FuJacob/cotabby", trusted: true
 
 # GUI
 cask "androidfilesync"
-cask "cotabby"
 cask "ghostty"
 cask "helium-browser"
 cask "iloader"
@@ -60,6 +58,6 @@ cask "octarine"
 cask "orbstack"
 cask "orion"
 brew "mpv"
+cask "radix"
 cask "veracrypt-fuse-t"
 cask "zed"
-
