@@ -23,6 +23,7 @@ fi
 ## NEOVIM
 if (( $+commands[nvim] )); then
     alias vi='nvim'
+    alias diffv="nvim -c DiffviewOpen"
 fi
 
 ## BAT
