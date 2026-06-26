@@ -1,3 +1,5 @@
+<div align="center">
+
 ```
       ██            ██     ████ ██  ██
      ░██           ░██    ░██░ ░░  ░██
@@ -9,33 +11,32 @@
  ░░░░░░  ░░░░░░     ░░    ░░   ░░ ░░░  ░░░░░░ ░░░░░░
 
   ▓▓▓▓▓▓▓▓▓▓
- ░▓ about  ▓ custom ClearLinux config files
+ ░▓ about  ▓ custom macOS config files
  ░▓ author ▓ Zahid I. <dev@zahidislm.com>
  ░▓        ▓
  ░▓▓▓▓▓▓▓▓▓▓
  ░░░░░░░░░░
 
 ```
+</div>
 
-# inspiration?
-de-preztofied core prezto modules, customized for Intel Clear Linux.
+<br>
 
 # install?
 Uses GNU Stow.
 
 # tl;dr
-navigate to your home directory
 
-`cd ~`
+```bash
+# navigate to your home directory
+cd $HOME
 
-clone the repo:
+# clone the repo:
+git clone https://github.com/zahidislm/dotfiles
 
-`git clone https://github.com/zahidislm/dotfiles`
+# enter the dotfiles directory
+cd dotfiles
 
-enter the dotfiles directory
-
-`cd dotfiles`
-
-install the config folders
-
-`stow git zsh nvim`
+# install the config folders
+stow bat brew ghostty git nvim zsh
+````
