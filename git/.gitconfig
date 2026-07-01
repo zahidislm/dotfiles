@@ -1,7 +1,7 @@
 [user]
     name = Zahid Islam
-	email = dev@zahidislm.com
-	signingkey = DE5E205CBE913676C6EAFA4B75A97F4044BF3A56
+    email = dev@zahidislm.com
+    signingkey = DE5E205CBE913676C6EAFA4B75A97F4044BF3A56
 [color]
     ui = auto
     interactive = auto
@@ -10,9 +10,9 @@
     whitespace = fix
 [core]
     # Use custom `.gitignore` and `.gitattributes`.
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
-    pager = delta
+    pager = delta --diff-so-fancy
     editor = nvim
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error.
@@ -25,97 +25,11 @@
     untrackedCache = true
     compression = 9
 [interactive]
-    diffFilter = delta --color-only --diff-so-fancy --features=interactive
+    diffFilter = delta --color-only --diff-so-fancy
 [delta]
     line-numbers = true
-	features = kanso-ink
     navigate = true
-	light = false
-[delta "kanso-ink"]
-    dark = true
     syntax-theme = ansi
-    # File Labels
-    file-added-label = [+]
-    file-copied-label = [==]
-    file-modified-label = [*]
-    file-removed-label = [-]
-    file-renamed-label = [->]
-    # File Header Styles
-    file-style = "#c5c9c7" bold
-    file-decoration-style = "#DCA561" ul
-    # Hunk Header Styles
-    hunk-header-style = file line-number syntax "#252535" bold italic
-    hunk-header-file-style = "#DCA561" "#252535" ul bold
-    hunk-header-line-number-style = "#DCA561" "#252535" box bold
-    hunk-header-decoration-style = "#DCA561" "#252535" ul
-    # Diff Styles
-    minus-style = syntax "#43242B"
-    plus-style = syntax "#2B3328"
-    minus-emph-style = "#14171d" "#C34043"
-    plus-emph-style = "#14171d" "#76946A"
-    # Line Numbers
-    line-numbers = true
-    line-numbers-minus-style = "#C34043" "#43242B"
-    line-numbers-plus-style = "#76946A" "#2B3328"
-    line-numbers-left-style = "#a4a7a4"
-    line-numbers-right-style = "#a4a7a4"
-    line-numbers-zero-style = "#393B42"
-    # General Styles
-    zero-style = syntax
-    whitespace-error-style = "#14171d" "#C34043" bold
-    # Blame Styles
-    blame-code-style = syntax
-    blame-format = "{author:<18} {commit:<6} {timestamp:<15}"
-    blame-palette = "#14171d" "#252535" "#393B42"
-    # Merge Conflicts
-    merge-conflict-begin-symbol = ~
-    merge-conflict-end-symbol = ~
-    merge-conflict-ours-diff-header-style = "#DCA561" "#252535" bold
-    merge-conflict-ours-diff-header-decoration-style = "#DCA561" "#252535" box
-    merge-conflict-theirs-diff-header-style = "#DCA561" "#252535" bold
-    merge-conflict-theirs-diff-header-decoration-style = "#DCA561" "#252535" box
-[delta "kanso-pearl"]
-    syntax-theme = ansi
-    # File Labels
-    file-added-label = [+]
-    file-copied-label = [==]
-    file-modified-label = [*]
-    file-removed-label = [-]
-    file-renamed-label = [->]
-    # File Header Styles
-    file-style = "#22262D" bold
-    file-decoration-style = "#de9800" ul
-    # Hunk Header Styles
-    hunk-header-style = file line-number syntax bold italic
-    hunk-header-file-style = "#de9800" ul bold
-    hunk-header-line-number-style = "#de9800" box bold
-    hunk-header-decoration-style = "#de9800" ul
-    # Diff Styles
-    minus-style = syntax "#d9a594"
-    plus-style = syntax "#b7d0ae"
-    minus-emph-style = "#f2f1ef" "#d7474b"
-    plus-emph-style = "#f2f1ef" "#6e915f"
-    # Line Numbers
-    line-numbers = true
-    line-numbers-minus-style = "#d7474b" "#d9a594"
-    line-numbers-plus-style = "#6e915f" "#b7d0ae"
-    line-numbers-left-style = "#9F9F99"
-    line-numbers-right-style = "#9F9F99"
-    line-numbers-zero-style = "#9F9F99"
-    # General Styles
-    zero-style = syntax
-    whitespace-error-style = "#f2f1ef" "#d7474b" bold
-    # Blame Styles
-    blame-code-style = syntax
-    blame-format = "{author:<18} {commit:<6} {timestamp:<15}"
-    blame-palette = "#f2f1ef" "#e2e1df" "#d7e3d8"
-    # Merge Conflicts
-    merge-conflict-begin-symbol = ~
-    merge-conflict-end-symbol = ~
-    merge-conflict-ours-diff-header-style = "#de9800" bold
-    merge-conflict-ours-diff-header-decoration-style = "#de9800" box
-    merge-conflict-theirs-diff-header-style = "#de9800" bold
-    merge-conflict-theirs-diff-header-decoration-style = "#de9800" box
 [help]
     autocorrect = 1
 [commit]
@@ -125,6 +39,8 @@
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     conflictstyle = diff3
+[pull]
+	rebase = true
 [push]
     # https://git-scm.com/docs/git-config#git-config-pushdefault
     default = simple
@@ -147,7 +63,7 @@
     ui = auto
 [tag]
     sort = -version:refname
-	gpgSign = true
+    gpgSign = true
 [maintenance]
     auto = true
     strategy = incremental

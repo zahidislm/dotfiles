@@ -106,7 +106,7 @@ z4h source ~/.zshrc.local
 
 # Load ZSH modules
 ZSH_HOME=$HOME/dotfiles/zsh
-module_order=(environment alias functions theme)
+module_order=(environment alias functions)
 
 for module in $module_order;
     source $ZSH_HOME/modules/$module/init.zsh
